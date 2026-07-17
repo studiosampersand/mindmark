@@ -330,3 +330,65 @@ body{background:var(--paper)}
 @media(max-width:900px){.calm-intro{padding:42px}.calm-grid{grid-template-columns:1fr}.search-tool{grid-row:auto}}
 @media(max-width:620px){.calm-intro{padding:36px 26px;margin-bottom:42px;border-radius:28px}.calm-symbol{display:none}.calm-grid{gap:28px}.calm-tool{padding:30px 24px!important}.visual-search-grid{gap:6px}.search-tile{border-radius:10px}.mobile-bar{justify-content:flex-start}.mobile-bar button{flex:0 0 64px}}
 @media(prefers-reduced-motion:reduce){.search-tile,.grounding-progress span,.motion-setting input:after{transition:none}.search-tile.found{animation:none}}
+
+
+/* v0.000.015 — simplified information architecture */
+.goals-subview .subview-back{margin-bottom:var(--space-4)}
+.text-back{display:inline-flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--green-dark);font-weight:850;padding:8px 0;cursor:pointer}
+.text-back svg{width:19px;height:19px}
+.report-block-head{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-5);margin-bottom:var(--space-5)}
+.report-block-head h3{margin:.35rem 0 .55rem}
+.report-identity{display:flex;align-items:center;gap:14px;margin-bottom:var(--space-4)}
+.report-identity strong,.report-identity span{display:block}
+.report-identity span{color:var(--muted);font-size:.88rem;margin-top:2px}
+.insights-report-block{margin-top:var(--space-6)}
+@media(max-width:900px){
+  .mobile-bar{grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible;justify-content:stretch}
+  .mobile-bar button{min-width:0;flex:auto}
+  .report-block-head{display:grid}
+  .report-block-head .btn{width:100%}
+}
+@media print{
+  .sidebar,.mobile-bar,.app-top,.no-print{display:none!important}
+  .app-shell{display:block!important}
+  .app-main{padding:0!important}
+  .view{display:none!important}
+  #insightsView{display:block!important}
+  #insightsView>*:not(.insights-report-block){display:none!important}
+  .insights-report-block{display:block!important;box-shadow:none!important;border:0!important;margin:0!important}
+  body{background:#fff!important}
+}
+
+/* MindMark v0.000.016 — pre-release calm tools and install-state polish */
+#installBtn[hidden]{display:none!important}
+.color-hunt-tool{background:#fffaf0}
+.color-hunt-stage{display:flex;align-items:center;gap:18px;margin:26px 0 20px;padding:18px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
+.color-hunt-stage>span{width:72px;height:72px;border-radius:50%;border:8px solid #fff;box-shadow:0 0 0 1px var(--line);flex:0 0 auto;transition:background .25s ease,transform .25s ease}
+.color-hunt-stage small{display:block;color:var(--muted);font-weight:750;margin-bottom:4px}
+.color-hunt-stage strong{display:block;font-family:var(--serif);font-size:1.35rem;color:var(--green-dark)}
+.color-hunt-checks{display:flex;gap:12px;margin:0 0 18px}
+.color-hunt-checks button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--green-dark);font-weight:850;cursor:pointer;transition:transform .18s ease,background .18s ease,border-color .18s ease}
+.color-hunt-checks button:hover{transform:translateY(-2px);border-color:var(--green)}
+.color-hunt-checks button.found{background:var(--green-soft);border-color:var(--green);color:var(--green-dark);transform:scale(1.04)}
+.color-hunt-checks button.found::after{content:'✓';display:block;font-size:.78rem;line-height:.8}
+.pebble-tool{background:#f5f7f0}
+.pebble-field,.pebble-tray{min-height:104px;display:flex;align-items:flex-end;justify-content:center;gap:14px;padding:22px 16px;border-radius:22px}
+.pebble-field{margin:24px 0 14px;background:#fff;border:1px solid var(--line)}
+.pebble-tray{min-height:82px;background:#e7efe4;border:1px dashed #9bb7a0}
+.pebble{width:var(--pebble-size);height:calc(var(--pebble-size) * .72);padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center;transition:transform .22s ease,opacity .22s ease}
+.pebble span{display:block;width:100%;height:100%;background:#8fa591;border:2px solid #657d69;border-radius:48% 52% 43% 57%/58% 46% 54% 42%;box-shadow:0 5px 0 rgba(37,65,48,.08)}
+.pebble:nth-child(even) span{background:#b6a88d;border-color:#8f8169;border-radius:56% 44% 58% 42%/46% 57% 43% 54%}
+.pebble-1{--pebble-size:38px}.pebble-2{--pebble-size:50px}.pebble-3{--pebble-size:62px}.pebble-4{--pebble-size:74px}.pebble-5{--pebble-size:86px}
+.pebble:hover{transform:translateY(-4px)}
+.pebble.gentle-nudge{animation:gentle-nudge .38s ease}
+.pebble.placed{animation:pebble-place .35s ease;cursor:default}
+.pebble-tray .pebble{pointer-events:none}
+@keyframes gentle-nudge{0%,100%{transform:translateX(0)}35%{transform:translateX(-5px)}70%{transform:translateX(5px)}}
+@keyframes pebble-place{0%{transform:translateY(-8px);opacity:.5}100%{transform:translateY(0);opacity:1}}
+.reduce-ambient .pebble,.reduce-ambient .color-hunt-stage>span{transition:none}
+.reduce-ambient .pebble.gentle-nudge,.reduce-ambient .pebble.placed{animation:none}
+@media(max-width:620px){
+ .color-hunt-stage{padding:16px;gap:14px}.color-hunt-stage>span{width:60px;height:60px}
+ .pebble-field,.pebble-tray{gap:8px;padding:18px 10px}.pebble-1{--pebble-size:31px}.pebble-2{--pebble-size:40px}.pebble-3{--pebble-size:49px}.pebble-4{--pebble-size:58px}.pebble-5{--pebble-size:67px}
+}
+@media(min-width:901px){.kindness-tool{grid-column:1/-1}}
