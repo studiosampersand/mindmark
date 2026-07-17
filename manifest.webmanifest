@@ -1,14 +1,36 @@
 {
+  "id": "./app/",
   "name": "MindMark — gratis mood- en gewoontetracker",
   "short_name": "MindMark",
   "description": "Een gratis, oordeelvrije mood- en habit tracker. Alles blijft lokaal op je toestel.",
   "start_url": "./app/",
   "scope": "./",
   "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
   "background_color": "#FFFDF5",
   "theme_color": "#F4C542",
-  "lang": "nl",
+  "lang": "nl-BE",
+  "categories": [
+    "health",
+    "lifestyle",
+    "productivity"
+  ],
   "icons": [
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
     {
       "src": "./assets/icon-192.svg",
       "sizes": "192x192",
@@ -20,6 +42,41 @@
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Check-in van vandaag",
+      "short_name": "Check-in",
+      "url": "./app/?view=todayView",
+      "icons": [
+        {
+          "src": "./assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Mijn uitdagingen",
+      "short_name": "Uitdagingen",
+      "url": "./app/?view=challengesView",
+      "icons": [
+        {
+          "src": "./assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Rust & aandacht",
+      "short_name": "Rust",
+      "url": "./app/?view=calmView",
+      "icons": [
+        {
+          "src": "./assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
