@@ -47,19 +47,8 @@
   "shortcuts": [
     {
       "name": "Check-in van vandaag",
-      "short_name": "Check-in",
+      "short_name": "Vandaag",
       "url": "./app/?view=todayView",
-      "icons": [
-        {
-          "src": "./assets/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Mijn uitdagingen",
-      "short_name": "Uitdagingen",
-      "url": "./app/?view=challengesView",
       "icons": [
         {
           "src": "./assets/icon-192.png",
@@ -71,6 +60,17 @@
       "name": "Rust & aandacht",
       "short_name": "Rust",
       "url": "./app/?view=calmView",
+      "icons": [
+        {
+          "src": "./assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Mijn inzichten",
+      "short_name": "Inzichten",
+      "url": "./app/?view=insightsView",
       "icons": [
         {
           "src": "./assets/icon-192.png",

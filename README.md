@@ -1,4 +1,4 @@
-# MindMark v0.000.014 — Mature Calm UX
+# MindMark v0.000.016 — Pre-release Polish
 
 Gratis Nederlandstalige mood-, gewoonte- en patroontracker voor België.
 
@@ -16,12 +16,15 @@ Upload de volledige inhoud van deze map naar de root van `studiosampersand/mindm
 ## Privacy
 Check-ins, doelen, instellingen en voortgang staan uitsluitend in IndexedDB of lokale browserinstellingen op het toestel. Er is geen account of online back-up. Tekst uit de rustoefeningen wordt niet opgeslagen.
 
-## Nieuw in v0.000.014
-- Nieuwe sectie **Rust & aandacht**.
-- Origineel visueel zoekspel “Vind het stille vosje”, zonder tijdslimiet of score.
-- Begeleide 5-4-3-2-1-groundingoefening.
-- Tijdelijke zelfcompassiezin die niet wordt bewaard.
-- Bewegende decoratie en parallax kunnen worden stilgezet.
-- PNG-installatie-iconen van 192 en 512 pixels.
-- PWA-manifest met stabiele app-ID, categorieën en snelkoppelingen.
-- Offlinecache uitgebreid en verhoogd naar `mindmark-v0.000.014`.
+## Nieuw in v0.000.016
+- Rust uitgebreid met een kleurenspeurtocht zonder timer of score.
+- Nieuw kalm ordeningsspel waarbij keien van klein naar groot worden gelegd.
+- Groundingflow technisch vereenvoudigd en betrouwbaarder gemaakt.
+- Veilige, vaste uitdagingbibliotheek sterk uitgebreid met microdoelen rond verbinding, herstel, beweging, dagelijkse zorg, vriendelijkheid, focus, digitale rust en positieve aandacht.
+- Installatieknop wordt verborgen zodra MindMark als geïnstalleerde app draait of lokaal als geïnstalleerd is herkend.
+- Installatiestatus reageert op `display-mode: standalone`, iOS standalone-modus en het `appinstalled`-event.
+- Homepage en FAQ bijgewerkt met de nieuwe rustfuncties en installatie-uitleg.
+- Back-upexport en offlinecache verhoogd naar `0.000.016`.
+
+## Belangrijke grenzen
+MindMark vervangt geen psycholoog, arts, psychiater, medicatie, diagnose, behandeling of crisisdienst. De app is een lokaal hulpmiddel voor het registreren van emoties en gedrag.
